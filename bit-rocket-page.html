@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<head>
+    <title>Bit Rocket Project</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+</head>
+
+
+<!-- CSS Content Start -->
+<style>
+    /* TOP NAVIGATION BAR */
+    .TopNavBar {
+        overflow: auto;
+        color: #3E3E3E;
+    }
+    .TopNavBar #Name {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 3.6vmin;
+        margin: 1.8vmin 0 0 1.8vmin;
+    }
+    .TopNavBar #NameSubHeading {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 2.43vmin;
+        margin: 0.45vmin 0 0 1.8vmin;
+    }
+    .TopNavBar .RightNavBar a {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 3.15vmin;
+        margin: 4.5vmin 3.15vmin 0 0;
+        display: inline-block;
+        opacity: 1.0;
+        transition: opacity 0.4s;
+    }
+    .TopNavBar .RightNavBar a:hover {
+        cursor: pointer;
+    }
+    .TopNavBar .RightNavBar .line {
+        width: 0px;
+        height: 2px;
+        background-color: #3E3E3E;
+        margin: auto;
+        transition: width 0.5s ease;
+    }
+    .TopNavBar .RightNavBar #Home, .TopNavBar .RightNavBar #About, .TopNavBar .RightNavBar #Contact {
+        text-decoration: none;
+        color: #3E3E3E;
+    }
+    .TopNavBar .RightNavBar #Home:hover .line {
+        width: 100%;
+        transition: width 0.5s ease;
+    }
+    .TopNavBar .RightNavBar #About:hover .line {
+        width: 100%;
+        transition: width 0.5s ease;
+    }
+    .TopNavBar .RightNavBar #Contact:hover .line {
+        width: 100%;
+        transition: width 0.5s ease;
+    }
+    .TopNavBar .RightNavBar #Contact {
+        margin: 4.5vmin 6.3vmin 0 0;
+    }
+    .TopNavBar .LeftNavBar {
+        float: left;
+    }
+    .TopNavBar .RightNavBar {
+        float: right;
+    }
+    
+    
+
+    /* PORTFOLIO */
+    .Portfolio {
+        overflow: hidden;
+    }
+    
+    /* BIT ROCKET */
+    .Portfolio .BitRocket {
+        margin: 15vmin 0 0 10.8vmin;
+    }
+    .Portfolio .BitRocket #BitRocketOniPhone {
+        width: 25%;
+        height: auto;
+        display: inline-block;
+    }
+    .Portfolio .BitRocket .TextContainer {
+        display: inline-block;
+        vertical-align: top;
+        margin: 5% 0 0 0;
+    }
+    .Portfolio .BitRocket #NameText {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 7.7vmin;
+        margin: 0vmin 0 0 7.2vmin;
+        color: #EB4548;
+    }
+    .Portfolio .BitRocket #NameSubheading {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 4.9vmin;
+        margin: 0.5vmin 0 0 7.2vmin;
+        color: #3E3E3E;
+    }
+    .Portfolio .BitRocket #EngineText {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 4.9vmin;
+        margin: 2.5vmin 0 0 7.2vmin;
+        color: #3E3E3E;
+    }
+    .Portfolio .BitRocket #LanguageText {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 4.9vmin;
+        margin: 0.5vmin 0 0 7.2vmin;
+        color: #3E3E3E;
+    }
+    .Portfolio .BitRocket hr {
+        margin: 2vmin 0 2vmin 7.2vmin;
+        color: #3E3E3E;
+        width: 90%;
+    }
+    .Portfolio #DescriptionText {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 3.5vmin;
+        margin: 0.5vmin 0 0 7.2vmin;
+        color: #3E3E3E;
+        width: 50vw;
+        margin-right: 0;
+    }
+    
+    
+    
+    
+    /* BIT ROCKET IMAGES */
+    .Portfolio .ImagesContainer {
+        margin: 7vmin 0 0 -10.8vmin;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .Portfolio .ImagesContainer #BitRocketImage {
+        width: 15%;
+        height: auto;
+        display: inline-block;
+        margin: 0 1.5vw 0 1.5vw;
+        cursor: pointer;
+    }
+    
+    
+    
+    /* FEATURES TEXT */
+    .Portfolio .FeaturesText {
+        margin: 7vmin 0 5vmin 10%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .Portfolio .FeaturesText #FeaturesHeading {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 6.7vmin;
+        color: #EB4548;
+        text-align: left;
+        margin: 0 0 1.5vmin 0;
+    }
+    
+    .Portfolio .FeaturesText #FeaturesLine {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 4vmin;
+        color: #3E3E3E;
+        text-align: left;
+        margin: 0.5vmin 0 0.5vmin 0;
+    }
+    
+    
+    /* The Modal (background) */
+    .modal {
+        display: block; /* Hidden by default */
+        opacity: 0;
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 0; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 0; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 35%;
+        transform: scale(0.5);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Modal Content */
+    .modal-content #modalImage {
+        width: 90%;
+    }
+    
+    /* The Close Button */
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    
+    
+    
+    @media screen and (min-width: 300px) and (orientation:portrait) {
+        .Portfolio .BitRocket .TextContainer {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 0 0 0;
+        }
+        .Portfolio .BitRocket #NameText {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 6.7vmin;
+            margin: 0vmin 0 0 7.2vmin;
+            color: #EB4548;
+        }
+        .Portfolio .BitRocket #NameSubheading {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 4.3vmin;
+            margin: 0.5vmin 0 0 7.2vmin;
+            color: #3E3E3E;
+        }
+        .Portfolio .BitRocket #EngineText {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 4.5vmin;
+            margin: 2.5vmin 0 0 7.2vmin;
+            color: #3E3E3E;
+        }
+        .Portfolio .BitRocket #LanguageText {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 4.5vmin;
+            margin: 0.5vmin 0 0 7.2vmin;
+            color: #3E3E3E;
+        }
+        .Portfolio #DescriptionText {
+            font-family: 'Roboto', sans-serif;
+            white-space: normal;
+            font-weight: 300;
+            font-size: 3.5vmin;
+            margin: 0.5vmin 0 0 7.2vmin;
+            color: #3E3E3E;
+            width: 55vw;
+            margin-right: 0;
+        }
+        /* BIT ROCKET IMAGES */
+        .Portfolio .ImagesContainer {
+            margin: 7vmin 0 0 -10.8vmin;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .Portfolio .ImagesContainer #BitRocketImage {
+            width: 35%;
+            height: auto;
+            display: inline-block;
+            margin: 5vw 2vw 0 2vw;
+        }
+        
+        
+        
+        /* The Modal (background) */
+        .modal {
+            display: block; /* Hidden by default */
+            opacity: 0;
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 0; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 0; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            transform: scale(0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Modal Content */
+        .modal-content #modalImage {
+            width: 100%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 58px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+    
+</style>
+
+
+<!-- HTML Content Start -->
+<body style="margin: 0; background: white;">
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content" id="modalContent">
+        <span class="close">&times;</span>
+        <img id="modalImage" src="PortfolioImages/JLSAerosteelImage1.png">
+      </div>
+
+    </div>
+    
+        
+    <!-- TOP NAVIGATION BAR -->
+    <div class="TopNavBar">
+        <div class="LeftNavBar">
+            <p id="Name">JAKE SHORT</p>
+            <p id="NameSubHeading">Mobile & Web Developer</p>
+        </div>
+        <div class="RightNavBar">
+            <a id="Home" href="home.html">HOME<div class="line"></div></a>
+            <a id="About" href="about.html">ABOUT<div class="line"></div></a>
+            <a id="Contact" href="contact.html">CONTACT<div class="line"></div></a>
+        </div>
+    </div>
+
+    <!-- PORTFOLIO -->
+    <div class="Portfolio">
+        <div class="BitRocket">
+            <img id="BitRocketOniPhone" src="PortfolioImages/BitRocketOniPhoneWithOutline.png">
+            <div class="TextContainer">
+                <p id="NameText">Bit Rocket</p>
+                <p id="NameSubheading">iOS Game</p>
+                <p id="EngineText">Development Engine: Unity</p>
+                <p id="LanguageText">Programming Language: C#</p>
+                
+                <hr>
+                
+                <p id="DescriptionText">Bit Rocket is a game I released in early 2019. It is the first game I developed and released. It is a small, simple game with infinite gameplay. The game was developed in Unity, and was made with assets that I designed and made. It is a free game which is supported with unobtrusive advertisements.</p>
+                
+            </div>
+            
+            <div class="ImagesContainer">
+                <img id="BitRocketImage" class="BitRocketImage" src="PortfolioImages/BitRocketImage1.png">
+                <img id="BitRocketImage" class="BitRocketImage" src="PortfolioImages/BitRocketImage2.png">
+                <img id="BitRocketImage" class="BitRocketImage" src="PortfolioImages/BitRocketImage3.png">
+                <img id="BitRocketImage" class="BitRocketImage" src="PortfolioImages/BitRocketImage4.png">
+            </div>
+            
+            <div class="FeaturesText">
+                <p id="FeaturesHeading">Features</p>
+                <p id="FeaturesLine">- Unity Ads integration</p>
+                <p id="FeaturesLine">- Retro pixel art style</p>
+                <p id="FeaturesLine">- Satisfying animations</p>
+                <p id="FeaturesLine">- High score system</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    var modalContent = document.getElementById("modalContent");
+
+    // Get the button that opens the modal
+    var bitRocketImage = document.getElementsByClassName("BitRocketImage");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    bitRocketImage[0].onclick = function() {
+      modal.style.height = "100%";
+      modal.style.opacity = "1";
+      modal.style.paddingTop = "100px";
+      modalContent.style.transform = "scale(1)";
+      document.getElementById("modalImage").src = "PortfolioImages/BitRocketImage1.png";
+    }
+    bitRocketImage[1].onclick = function() {
+      modal.style.height = "100%";
+      modal.style.opacity = "1";
+      modal.style.paddingTop = "100px";
+      modalContent.style.transform = "scale(1)";
+      document.getElementById("modalImage").src = "PortfolioImages/BitRocketImage2.png";
+    }
+    bitRocketImage[2].onclick = function() {
+      modal.style.height = "100%";
+      modal.style.opacity = "1";
+      modal.style.paddingTop = "100px";
+      modalContent.style.transform = "scale(1)";
+      document.getElementById("modalImage").src = "PortfolioImages/BitRocketImage3.png";
+    }
+    bitRocketImage[3].onclick = function() {
+      modal.style.height = "100%";
+      modal.style.opacity = "1";
+      modal.style.paddingTop = "100px";
+      modalContent.style.transform = "scale(1)";
+      document.getElementById("modalImage").src = "PortfolioImages/BitRocketImage4.png";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.height = "0px";
+        modal.style.opacity = "0";
+        modal.style.paddingTop = "0";
+        modalContent.style.transform = "scale(0.5)";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.height = "0px";
+        modal.style.opacity = "0";
+        modal.style.paddingTop = "0";
+        modalContent.style.transform = "scale(0.5)";
+      }
+    }
+</script>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<head>
+    <title>Contact</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+</head>
+
+
+<!-- CSS Content Start -->
+<style>
+    /* TOP NAVIGATION BAR */
+    .TopNavBar {
+        overflow: auto;
+        color: #3E3E3E;
+    }
+    .TopNavBar #Name {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 3.6vmin;
+        margin: 1.8vmin 0 0 1.8vmin;
+    }
+    .TopNavBar #NameSubHeading {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 2.43vmin;
+        margin: 0.45vmin 0 0 1.8vmin;
+    }
+    .TopNavBar .RightNavBar a {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 3.15vmin;
+        margin: 4.5vmin 3.15vmin 0 0;
+        display: inline-block;
+        opacity: 1.0;
+        transition: opacity 0.4s;
+    }
+    .TopNavBar .RightNavBar a:hover {
+        cursor: pointer;
+    }
+    .TopNavBar .RightNavBar .line {
+        width: 0px;
+        height: 2px;
+        background-color: #3E3E3E;
+        margin: auto;
+        transition: width 0.5s ease;
+    }
+    .TopNavBar .RightNavBar #Home, .TopNavBar .RightNavBar #About, .TopNavBar .RightNavBar #Contact {
+        text-decoration: none;
+        color: #3E3E3E;
+    }
+    .TopNavBar .RightNavBar #Home:hover .line {
+        width: 100%;
+        transition: width 0.5s ease;
+    }
+    .TopNavBar .RightNavBar #About:hover .line {
+        width: 100%;
+        transition: width 0.5s ease;
+    }
+    .TopNavBar .RightNavBar #Contact:hover .line {
+        width: 100%;
+        transition: width 0.5s ease;
+    }
+    .TopNavBar .RightNavBar #Contact {
+        margin: 4.5vmin 6.3vmin 0 0;
+    }
+    .TopNavBar .LeftNavBar {
+        float: left;
+    }
+    .TopNavBar .RightNavBar {
+        float: right;
+    }
+    
+    
+
+    /* LANDING PAGE */
+    .PageHeader .TextContainer {
+        margin: 0 0 0 10.8vmin;
+    }
+    .PageHeader .TextContainer #ContactText {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 9vmin;
+        margin-top: 10vmin;
+        margin-bottom: 0;
+        color: #EB4548;
+    }
+    .PageHeader .TextContainer #ContactForm {
+        width: 42%;
+        max-width: 500px;
+        height: 500px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 3vmin;
+        padding: 15px;
+        border-radius: 5px;
+    }
+    
+    /* FORM UNDERLINES */
+    .PageHeader .TextContainer #ContactForm .Underline {
+        width: 100%;
+        height: 1px;
+        background-image: linear-gradient(#959595, #959595);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin: 0 0 50px 0;
+    }
+    .PageHeader .TextContainer #ContactForm .InnerUnderline {
+        width: 100%;
+        height: 2px;
+        background-image: linear-gradient(#EB4548, #EB4548);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 0% 100%;
+        transition: background-size 0.2s;
+    }
+    .PageHeader .TextContainer #ContactForm .MessageUnderline {
+        width: 100%;
+        height: 1px;
+        background-image: linear-gradient(#959595, #959595);
+        margin: -7px 0 50px 0;
+    }
+    .PageHeader .TextContainer #ContactForm .InnerMessageUnderline {
+        width: 100%;
+        height: 2px;
+        background-image: linear-gradient(#EB4548, #EB4548);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 0% 100%;
+        transition: background-size 0.2s;
+    }
+    
+    .PageHeader .TextContainer #ContactForm input[type=text]:focus + .Underline > .InnerUnderline, .PageHeader .TextContainer #ContactForm input[type=email]:focus + .Underline > .InnerUnderline {          
+        background-image: linear-gradient(#EB4548, #EB4548); 
+        background-size: 100% 100%;
+    }
+    
+    .PageHeader .TextContainer #ContactForm textarea:focus + .MessageUnderline > .InnerMessageUnderline {           
+        background-image: linear-gradient(#EB4548, #EB4548); 
+        background-size: 100% 100%;
+    }
+    
+    
+    
+    .PageHeader .TextContainer #ContactForm input[type=text], .PageHeader .TextContainer #ContactForm input[type=email] {
+        width: 100%;
+        padding: 12px 12px 5px 0;
+        margin: 15px 0 0 0;
+        border: 0;
+        outline: 0;
+        box-sizing: border-box;
+        background-color: transparent;
+        font-size: 2vmin;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        color: #3E3E3E;
+    }
+    .PageHeader .TextContainer #ContactForm input[type=text]::placeholder, .PageHeader .TextContainer #ContactForm input[type=email]::placeholder {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        color: #959595;
+    }
+    .PageHeader .TextContainer #ContactForm select {
+        width: 100%;
+        padding: 6px 0 6px 10px;
+        margin: 15px 0 50px 0;
+        border-radius: 5px;
+        border: 1px solid #959595;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 60%;
+        color: #959595;
+    }
+    .PageHeader .TextContainer #ContactForm select:focus {
+        outline: none;
+    }
+    .PageHeader .TextContainer #ContactForm textarea {
+        width: 100%;
+        height: 42px;
+        padding: 12px 12px 5px 0;
+        margin: 15px 0 0 0;
+        border: 0;
+        outline: 0;
+        box-sizing: border-box;
+        background-color: transparent;
+        font-size: 2vmin;
+        resize: none;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        color: #3E3E3E;
+    }
+    .PageHeader .TextContainer #ContactForm textarea::placeholder {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        color: #959595;
+    }
+    .PageHeader .TextContainer #ContactForm input[type=submit] {
+        width: 40%;
+        background-color: #EB4548;
+        color: #ffffff;
+        padding: 12px 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 70%;
+        margin: 0 0 1vmin 0;
+    }
+    
+    .PageHeader .TextContainer #SubmittedText {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 4.5vmin;
+        margin: 0;
+        color: #3E3E3E;
+    }
+    
+    @media screen and (min-width: 300px) and (orientation:portrait) {
+        .PageHeader .TextContainer #DescriptionText {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 4.2vmin;
+            margin: 0;
+            color: #3E3E3E;
+            width: 90%;
+        }
+    }
+    
+    
+    @media screen and (min-width: 300px) and (orientation:portrait) {
+        .PageHeader .TextContainer #ContactForm {
+            width: 62%;
+            max-width: 500px;
+            height: 500px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 3vmin;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    }
+</style>
+
+
+<!-- HTML Content Start -->
+<body style="margin: 0; background: white;">
+    <!-- TOP NAVIGATION BAR -->
+    <div class="TopNavBar">
+        <div class="LeftNavBar">
+            <p id="Name">JAKE SHORT</p>
+            <p id="NameSubHeading">Mobile & Web Developer</p>
+        </div>
+        <div class="RightNavBar">
+            <a id="Home" href="home.html">HOME<div class="line"></div></a>
+            <a id="About" href="about.html">ABOUT<div class="line"></div></a>
+            <a id="Contact" href="contact.html">CONTACT<div class="line"></div></a>
+        </div>
+    </div>
+
+    <!-- PAGE HEADER -->
+    <div class="PageHeader">
+        <div class="TextContainer">
+            <p id="ContactText">Contact</p>
+            
+            <script type="text/javascript">var submitted=false;</script>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {document.getElementById('ContactForm').outerHTML='<p id=\'SubmittedText\'>Thanks! Your message has been sent.</p>'}"></iframe>
+            
+            <form id="ContactForm" action="https://docs.google.com/forms/d/e/1FAIpQLSerZgZao8R6b1RoYP8vXSR-zcvZvjZKh-kDuPuQEPdImyg-Uw/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true">
+                Name: <p style="display: inline-block; color: #e74c3c; margin: 0; padding: 0;">*</p><br>
+                <input type="text" name="entry.2005620554" placeholder="Name" autocomplete="off" required>
+                <div class="Underline"><div class="InnerUnderline"></div></div>
+                
+                Email Address: <p style="display: inline-block; color: #e74c3c; margin: 0; padding: 0;">*</p><br>
+                <input type="email" name="entry.1045781291" placeholder="Email" autocomplete="off" required>
+                <div class="Underline"><div class="InnerUnderline"></div></div>
+                
+                Are you requesting a project? <p style="display: inline-block; color: #e74c3c; margin: 0; padding: 0;">*</p><br>
+                <select name="entry.908143179" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+                
+                Message: <p style="display: inline-block; color: #e74c3c; margin: 0; padding: 0;">*</p>
+                <p style="display: block; color: #959595; font-size: 60%; margin: 3px 0 0 0; padding: 0;">If you are requesting a project, include details such as budget and project deadline.</p>
+                <textarea type="text" name="entry.1484661925" placeholder="Message" oninput='this.style.height = ""; this.style.height = this.scrollHeight + 3 + "px"' minlength="25" required></textarea>
+                <div class="MessageUnderline"><div class="InnerMessageUnderline"></div></div>
+                
+                <input type="submit" value="SUBMIT">
+            </form>
+        </div>
+    </div>
+
+</body>

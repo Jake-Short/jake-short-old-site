@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<head>
+    <title>About Me</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+</head>
+
+
+<!-- CSS Content Start -->
+<style>
+    /* TOP NAVIGATION BAR */
+    .TopNavBar {
+        overflow: auto;
+        color: #3E3E3E;
+    }
+    .TopNavBar #Name {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 3.6vmin;
+        margin: 1.8vmin 0 0 1.8vmin;
+    }
+    .TopNavBar #NameSubHeading {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 2.43vmin;
+        margin: 0.45vmin 0 0 1.8vmin;
+    }
+    .TopNavBar .RightNavBar a {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 3.15vmin;
+        margin: 4.5vmin 3.15vmin 0 0;
+        display: inline-block;
+        opacity: 1.0;
+        transition: opacity 0.4s;
+    }
+    .TopNavBar .RightNavBar a:hover {
+        cursor: pointer;
+    }
+    .TopNavBar .RightNavBar .line {
+        width: 0px;
+        height: 2px;
+        background-color: #3E3E3E;
+        margin: auto;
+        transition: width 0.5s ease;
+    }
+    .TopNavBar .RightNavBar #Home, .TopNavBar .RightNavBar #About, .TopNavBar .RightNavBar #Contact {
+        text-decoration: none;
+        color: #3E3E3E;
+    }
+    .TopNavBar .RightNavBar #Home:hover .line {
+        width: 100%;
+        transition: width 0.5s ease;
+    }
+    .TopNavBar .RightNavBar #About:hover .line {
+        width: 100%;
+        transition: width 0.5s ease;
+    }
+    .TopNavBar .RightNavBar #Contact:hover .line {
+        width: 100%;
+        transition: width 0.5s ease;
+    }
+    .TopNavBar .RightNavBar #Contact {
+        margin: 4.5vmin 6.3vmin 0 0;
+    }
+    .TopNavBar .LeftNavBar {
+        float: left;
+    }
+    .TopNavBar .RightNavBar {
+        float: right;
+    }
+    
+    
+
+    /* LANDING PAGE */
+    .PageHeader .TextContainer {
+        margin: 0 0 0 10.8vmin;
+    }
+    .PageHeader .TextContainer #AboutText {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 9vmin;
+        margin-top: 10vmin;
+        margin-bottom: 0;
+        color: #EB4548;
+    }
+    .PageHeader .TextContainer #DescriptionText {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 4.5vmin;
+        margin: 0;
+        color: #3E3E3E;
+    }
+    
+    @media screen and (min-width: 300px) and (orientation:portrait) {
+        .PageHeader .TextContainer #DescriptionText {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 4.2vmin;
+            margin: 0;
+            color: #3E3E3E;
+            width: 90%;
+        }
+    }
+    
+</style>
+
+
+<!-- HTML Content Start -->
+<body style="margin: 0; background: white;">
+    <!-- TOP NAVIGATION BAR -->
+    <div class="TopNavBar">
+        <div class="LeftNavBar">
+            <p id="Name">JAKE SHORT</p>
+            <p id="NameSubHeading">Mobile & Web Developer</p>
+        </div>
+        <div class="RightNavBar">
+            <a id="Home" href="home.html">HOME<div class="line"></div></a>
+            <a id="About" href="about.html">ABOUT<div class="line"></div></a>
+            <a id="Contact" href="contact.html">CONTACT<div class="line"></div></a>
+        </div>
+    </div>
+
+    <!-- PAGE HEADER -->
+    <div class="PageHeader">
+        <div class="TextContainer">
+            <p id="AboutText">About Me</p>
+            <p id="DescriptionText">I am a mobile and web developer from Seattle, WA. I enjoy making small, retro style games in my free time, and making simple yet effective websites. I have been programming for more than 3 years, learning many skills in programs such as Unity and Visual Studio. I have mainly been programming with C#, HTML, CSS, and JavaScript. I am always open to new ideas or projects, so feel free to <a href="" style="font-weight: 400; cursor: pointer; text-decoration: none; color: #2A2A2A;">contact me.</a></p>
+        </div>
+    </div>
+
+</body>
