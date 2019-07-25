@@ -95,6 +95,22 @@
         border-radius: 5px;
     }
     
+    .PageHeader .TextContainer #ContactForm #ErrorText {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 2vmin;
+        color: #EB4548;
+        margin: 0 0 35px 0;
+    }
+    
+    .PageHeader .TextContainer #ContactForm #MessageErrorText {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 2vmin;
+        color: #EB4548;
+        margin: 0 0 35px 0;
+    }
+    
     /* FORM UNDERLINES */
     .PageHeader .TextContainer #ContactForm .Underline {
         width: 100%;
@@ -103,7 +119,7 @@
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        margin: 0 0 50px 0;
+        margin: 0 0 0 0;
     }
     .PageHeader .TextContainer #ContactForm .InnerUnderline {
         width: 100%;
@@ -118,7 +134,7 @@
         width: 100%;
         height: 1px;
         background-image: linear-gradient(#959595, #959595);
-        margin: 0 0 50px 0;
+        margin: 0 0 0 0;
     }
     .PageHeader .TextContainer #ContactForm .InnerMessageUnderline {
         width: 100%;
@@ -176,7 +192,7 @@
     }
     .PageHeader .TextContainer #ContactForm textarea {
         width: 100%;
-        padding: 12px 12px 5px 0;
+        padding: 12px 12px 0 0;
         margin: 15px 0 0 0;
         border: 0;
         outline: 0;
@@ -196,7 +212,7 @@
     .PageHeader .TextContainer #ContactForm input[type=submit] {
         -webkit-appearance: none;
         appearance: none;
-        width: 40%;
+        width: 35%;
         background-color: #EB4548;
         color: #ffffff;
         padding: 12px 12px;
@@ -206,7 +222,7 @@
         font-family: 'Roboto', sans-serif;
         font-weight: 400;
         font-size: 70%;
-        margin: 0 0 1vmin 0;
+        margin: 0 0 2.5vmin 0;
     }
     
     .PageHeader .TextContainer #SubmittedText {
@@ -264,31 +280,77 @@
         <div class="TextContainer">
             <p id="ContactText">Contact</p>
             
-            <script type="text/javascript">var submitted=false;</script>
-            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {document.getElementById('ContactForm').outerHTML='<p id=\'SubmittedText\'>Thanks! Your message has been sent.</p>'}"></iframe>
-            
-            <form id="ContactForm" action="https://docs.google.com/forms/d/e/1FAIpQLSerZgZao8R6b1RoYP8vXSR-zcvZvjZKh-kDuPuQEPdImyg-Uw/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true">
+            <form id="ContactForm" action="https://docs.google.com/forms/d/e/1FAIpQLSerZgZao8R6b1RoYP8vXSR-zcvZvjZKh-kDuPuQEPdImyg-Uw/formResponse" method="post" target="hidden_iframe" onsubmit="form_submitted()">
                 Name: <p style="display: inline-block; color: #e74c3c; margin: 0; padding: 0;">*</p><br>
-                <input type="text" name="entry.2005620554" placeholder="Name" autocomplete="off" required>
+                <input type="text" id="formName" name="entry.2005620554" placeholder="Name">
                 <div class="Underline"><div class="InnerUnderline"></div></div>
+                <p id="ErrorText" class="NameErrorText">&nbsp;</p>
                 
                 Email Address: <p style="display: inline-block; color: #e74c3c; margin: 0; padding: 0;">*</p><br>
-                <input type="email" name="entry.1045781291" placeholder="Email" autocomplete="off" required>
+                <input type="text" id="formEmail" name="entry.1045781291" placeholder="Email">
                 <div class="Underline"><div class="InnerUnderline"></div></div>
+                <p id="ErrorText" class="EmailErrorText">&nbsp;</p>
                 
                 Are you requesting a project? <p style="display: inline-block; color: #e74c3c; margin: 0; padding: 0;">*</p><br>
-                <select name="entry.908143179" required>
+                <select name="entry.908143179">
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                 </select>
                 
                 Message: <p style="display: inline-block; color: #e74c3c; margin: 0; padding: 0;">*</p>
                 <p style="display: block; color: #959595; font-size: 60%; margin: 3px 0 0 0; padding: 0;">If you are requesting a project, include details such as budget and project deadline.</p>
-                <textarea type="text" name="entry.1484661925" placeholder="Message" oninput='this.style.height = ""; this.style.height = this.scrollHeight + 3 + "px"' minlength="25" rows="1" required></textarea>
+                <textarea type="text" id="formMessage" name="entry.1484661925" placeholder="Message" oninput='this.style.height = ""; this.style.height = this.scrollHeight + 0 + "px"' rows="1"></textarea>
                 <div class="MessageUnderline"><div class="InnerMessageUnderline"></div></div>
+                <p id="MessageErrorText" class="MessageErrorText">&nbsp;</p>
                 
                 <input type="submit" value="SUBMIT">
             </form>
+            
+            <script type="text/javascript">
+                var submitted = false;
+                
+                function validateEmail(email) {
+                    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    return re.test(String(email).toLowerCase());
+                }
+                
+                document.getElementById('ContactForm').onsubmit = function() {
+                    var invalid = false;
+                    if(document.getElementById('formName').value.length < 1) {
+                        document.getElementsByClassName('NameErrorText')[0].innerHTML = 'Please fill out this field.'
+                        invalid = true;
+                    }
+                    else {
+                        document.getElementsByClassName('NameErrorText')[0].innerHTML = '&nbsp;'
+                    }
+                    
+                    if(validateEmail(document.getElementById('formEmail').value) == false) {
+                        document.getElementsByClassName('EmailErrorText')[0].innerHTML = 'Please enter a valid email.'
+                        invalid = true;
+                    }
+                    else {
+                        document.getElementsByClassName('EmailErrorText')[0].innerHTML = '&nbsp;'
+                    }
+                    
+                    if(document.getElementById('formMessage').value.length < 25) {
+                        document.getElementsByClassName('MessageErrorText')[0].innerHTML = 'Please use more than 25 characters.'
+                        invalid = true;
+                    }
+                    else {
+                        document.getElementsByClassName('MessageErrorText')[0].innerHTML = '&nbsp;'
+                    }
+                    
+                    if(invalid == true) {
+                        return false;
+                    }
+                    else {
+                        submitted = true;
+                        return true;
+                    }
+                }
+            </script>
+
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {document.getElementById('ContactForm').outerHTML='<p id=\'SubmittedText\'>Thanks! Your message has been sent.</p>'}"></iframe>
         </div>
     </div>
 

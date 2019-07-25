@@ -86,11 +86,27 @@
         height: auto;
         display: inline-block;
     }
+    
     .Portfolio .JLSAerosteel .TextContainer {
         display: inline-block;
         vertical-align: top;
         margin: 5% 0 0 0;
     }
+    
+    @media screen and (min-width: 2160px) and (min-aspect-ratio: 2/1) {
+        .Portfolio .JLSAerosteel #JLSAerosteelOnLaptop {
+            width: 35%;
+            height: auto;
+            display: inline-block;
+        }
+        
+        .Portfolio .JLSAerosteel .TextContainer {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 0 0 0;
+        }
+    }
+    
     .Portfolio .JLSAerosteel #NameText {
         font-family: 'Roboto', sans-serif;
         font-weight: 400;
@@ -357,12 +373,14 @@
             font-size: 38px;
             font-weight: bold;
         }
-
-        .close:hover,
-        .close:focus {
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
+    }
+    
+    @media screen and (max-width: 1300px) {
+        .Portfolio .JLSAerosteel #JLSAerosteelOnLaptop {
+            width: 45%;
+            margin-left: 1%;
+            height: auto;
+            display: inline-block;
         }
     }
     
