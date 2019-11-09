@@ -3,6 +3,7 @@
     <title>Contact</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 
@@ -303,6 +304,10 @@
                 <div class="MessageUnderline"><div class="InnerMessageUnderline"></div></div>
                 <p id="MessageErrorText" class="MessageErrorText">&nbsp;</p>
                 
+                <div class="g-recaptcha" data-sitekey="6Leo1MEUAAAAAC8JsRO7JpYm8vT2ya_nOrn_WLaz"></div>
+                <p id="ErrorText" class="ReCaptchaErrorText">&nbsp;</p>
+                <br/>
+                
                 <input type="submit" value="SUBMIT">
             </form>
             
@@ -338,6 +343,15 @@
                     }
                     else {
                         document.getElementsByClassName('MessageErrorText')[0].innerHTML = '&nbsp;'
+                    }
+                    
+                    var resp = grecaptcha.getResponse();
+                    if(resp.length == 0) {
+                        document.getElementsByClassName('ReCaptchaErrorText')[0].innerHTML = 'Please fill out the captcha.';
+                        invalid = true;
+                    }
+                    else {
+                        document.getElementsByClassName('ReCaptchaErrorText')[0].innerHTML = '&nbsp;'
                     }
                     
                     if(invalid == true) {
