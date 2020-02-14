@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+</head>
+
+
+<!-- CSS Content Start -->
+<style>
+    /* TOP NAVIGATION BAR */
+    .TopNavBar {
+        overflow: auto;
+        color: #3E3E3E;
+    }
+    .TopNavBar #Name {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 3.6vmin;
+        margin: 1.8vmin 0 0 1.8vmin;
+    }
+    .TopNavBar #NameSubHeading {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 2.43vmin;
+        margin: 0.45vmin 0 0 1.8vmin;
+    }
+    .TopNavBar .RightNavBar a {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 3.15vmin;
+        margin: 4.5vmin 3.15vmin 0 0;
+        display: inline-block;
+        opacity: 1.0;
+        transition: opacity 0.4s;
+    }
+    .TopNavBar .RightNavBar a:hover {
+        cursor: pointer;
+    }
+    .TopNavBar .RightNavBar .line {
+        width: 0px;
+        height: 2px;
+        background-color: #3E3E3E;
+        margin: auto;
+        transition: width 0.5s ease;
+    }
+    .TopNavBar .RightNavBar #Home, .TopNavBar .RightNavBar #About, .TopNavBar .RightNavBar #Contact {
+        text-decoration: none;
+        color: #3E3E3E;
+    }
+    .TopNavBar .RightNavBar #Home:hover .line {
+        width: 100%;
+        transition: width 0.5s ease;
+    }
+    .TopNavBar .RightNavBar #About:hover .line {
+        width: 100%;
+        transition: width 0.5s ease;
+    }
+    .TopNavBar .RightNavBar #Contact:hover .line {
+        width: 100%;
+        transition: width 0.5s ease;
+    }
+    .TopNavBar .RightNavBar #Contact {
+        margin: 4.5vmin 6.3vmin 0 0;
+    }
+    .TopNavBar .LeftNavBar {
+        float: left;
+    }
+    .TopNavBar .RightNavBar {
+        float: right;
+    }
+    
+    
+
+    /* LANDING PAGE */
+    .PageHeader .TextContainer {
+        margin: 0 0 0 10.8vmin;
+    }
+    .PageHeader .TextContainer #HelloText {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 9vmin;
+        margin-top: 10vmin;
+        margin-bottom: 0;
+        color: #EB4548;
+    }
+    .PageHeader .TextContainer #NameText {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 9vmin;
+        margin: -1.8vmin 0 0 0;
+        color: #3E3E3E;
+    }
+    .PageHeader .TextContainer #DescriptionText {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 4.5vmin;
+        margin: 0;
+        color: #3E3E3E;
+    }
+    
+    .PageHeader .TextContainer #LanguagesText {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 4.5vmin;
+        margin: 1.5vmin 0 0 0;
+        color: #3E3E3E;
+    }
+    
+    
+
+    /* PORTFOLIO */
+    .Portfolio {
+        overflow: hidden;
+    }
+    
+    /* BIT ROCKET */
+    .Portfolio .BitRocket {
+        margin: 15vmin 0 0 10.8vmin;
+    }
+    .Portfolio .BitRocket #BitRocketOniPhone {
+        width: 25%;
+        height: auto;
+        display: inline-block;
+    }
+    .Portfolio .BitRocket .TextContainer {
+        display: inline-block;
+        vertical-align: top;
+        margin: 5% 0 0 0;
+    }
+    .Portfolio .BitRocket #NameText {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 6.3vmin;
+        margin: 0vmin 0 0 7.2vmin;
+        color: #EB4548;
+    }
+    .Portfolio .BitRocket #DescriptionText {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 4.9vmin;
+        margin: 0.5vmin 0 0 7.2vmin;
+        color: #3E3E3E;
+    }
+    .Portfolio .BitRocket .LearnMoreContainer {
+         margin: 4vmin 0 0 0;
+    }
+    .Portfolio .BitRocket #LearnMore {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 3.5vmin;
+        background-color: #EB4548;
+        color: white;
+        padding: 2vmin 2.5vmin;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        margin: 0 0 0 7.2vmin;
+        border-radius: 0.79vmin;
+    }
+    
+    /* JLS AEROSTEEL */
+    .Portfolio .JLSAerosteel {
+        margin: 15vmin 0 5vmin 5.8vmin;
+    }
+    
+    .Portfolio .JLSAerosteel #JLSAerosteelOnLaptop {
+        width: 45%;
+        height: auto;
+        display: inline-block;
+    }
+    .Portfolio .JLSAerosteel .TextContainer {
+        display: inline-block;
+        vertical-align: top;
+        margin: 2% 0 0 0;
+    }
+    .Portfolio .JLSAerosteel #NameText {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 6.3vmin;
+        margin: 0vmin 0 0 7.2vmin;
+        color: #EB4548;
+    }
+    .Portfolio .JLSAerosteel #DescriptionText {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 4.9vmin;
+        margin: 0.5vmin 0 0 7.2vmin;
+        color: #3E3E3E;
+    }
+    .Portfolio .JLSAerosteel .LearnMoreContainer {
+         margin: 4vmin 0 0 0;
+    }
+    .Portfolio .JLSAerosteel #LearnMore {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 3.5vmin;
+        background-color: #EB4548;
+        color: white;
+        padding: 2vmin 2.5vmin;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        margin: 0 0 0 7.2vmin;
+        border-radius: 0.79vmin;
+    }
+    
+    /* JLS AEROSTEEL (SMALL/PORTRAIT SCREEN) */
+    @media screen and (min-width: 300px) and (orientation:portrait) {
+        .Portfolio .JLSAerosteel .TextContainer {
+            display: inline-block;
+            vertical-align: top;
+            margin: 1.5% 0 0 0;
+        }
+        .Portfolio .JLSAerosteel #NameText {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 5.3vmin;
+            margin: 0vmin 0 0 7.2vmin;
+            color: #EB4548;
+        }
+        .Portfolio .JLSAerosteel #DescriptionText {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 3.9vmin;
+            margin: 0.5vmin 0 0 7.2vmin;
+            color: #3E3E3E;
+        }
+        .Portfolio .JLSAerosteel .LearnMoreContainer {
+             margin: 3.5vmin 0 0 0;
+        }
+        .Portfolio .JLSAerosteel #LearnMore {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 2.5vmin;
+            background-color: #EB4548;
+            color: white;
+            padding: 2vmin 2.5vmin;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            margin: 0 0 0 7.2vmin;
+            border-radius: 0.79vmin;
+        }
+    }
+    
+</style>
+
+
+<!-- HTML Content Start -->
+<body style="margin: 0; background: white;">
+    <!-- TOP NAVIGATION BAR -->
+    <div class="TopNavBar">
+        <div class="LeftNavBar">
+            <p id="Name">JAKE SHORT</p>
+            <p id="NameSubHeading">Mobile & Web Developer</p>
+        </div>
+        <div class="RightNavBar">
+            <a id="Home" href="home.html">HOME<div class="line"></div></a>
+            <a id="About" href="about.html">ABOUT<div class="line"></div></a>
+            <a id="Contact" href="contact.html">CONTACT<div class="line"></div></a>
+        </div>
+    </div>
+
+    <!-- PAGE HEADER -->
+    <div class="PageHeader">
+        <div class="TextContainer">
+            <p id="HelloText">Hello,</p>
+            <p id="NameText">I'm Jake Short</p>
+            <p id="DescriptionText">Mobile and web developer based in Seattle, WA</p>            
+            <p id="LanguagesText">HTML &nbsp;| &nbsp;CSS &nbsp;|&nbsp; JavaScript &nbsp;|&nbsp; C#</p>
+        </div>
+    </div>
+
+    <!-- PORTFOLIO -->
+    <div class="Portfolio">
+        <div class="BitRocket">
+            <img id="BitRocketOniPhone" src="PortfolioImages/BitRocketOniPhoneWithOutline.png">
+            <div class="TextContainer">
+                <p id="NameText">Bit Rocket</p>
+                <p id="DescriptionText">iOS Game</p>
+                <div class="LearnMoreContainer"><a href="bit-rocket-page.html" id="LearnMore">Learn More</a></div>
+            </div>
+        </div>
+        <div class="JLSAerosteel">
+            <img id="JLSAerosteelOnLaptop" src="PortfolioImages/JLSAerosteelOnLaptop.png">
+            <div class="TextContainer">
+                <p id="NameText">JLS Aerosteel</p>
+                <p id="DescriptionText">Website</p>
+                <div class="LearnMoreContainer"><a href="jls-aerosteel-page.html" id="LearnMore">Learn More</a></div>
+            </div>
+        </div>
+    </div>
+
+</body>

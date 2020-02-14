@@ -1,0 +1,53 @@
+.navigationBarContainer {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background: #2a2a2a;
+}
+
+.rightLinksContainer {
+    margin-left: auto;
+
+    padding: 50px 10% 0 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.linkText {
+    font-size: 1.3em;
+    font-weight: 600;
+
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+
+    margin: 0 25px;
+
+    font-family: 'Source Sans Pro', sans-serif;
+
+    cursor: pointer;
+}
+
+.rightLinksContainer a::after, .rightLinksContainer p::after {
+    content: '';
+    display: block;
+
+    border-bottom: 3px solid #525252;
+
+    width: 0;
+    position: absolute;
+    right: 0;
+
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+
+    padding: 0 0 20px 0;
+}
+  
+.rightLinksContainer a:hover::after, .rightLinksContainer p:hover::after { 
+    width: 100%; 
+}
