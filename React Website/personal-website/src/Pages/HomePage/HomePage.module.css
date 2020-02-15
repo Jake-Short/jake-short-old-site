@@ -45,14 +45,16 @@
     padding: 25px 0 0 10%;
 }
 
+.iconWrapper {
+    margin: 0 25px 0 0;
+}
+
 .linksRow ion-icon {
     color: rgba(255, 255, 255, 0.9);
 
     font-size: 1.75em;
 
     transition: ease-in-out 0.12s;
-
-    padding: 0 25px 0 0;
 }
 
 .linksRow ion-icon:hover {

@@ -1,3 +1,12 @@
+.mainContentContainer{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 10000;
+}
+
 .navigationBarContainer {
     width: 100%;
 
@@ -42,12 +51,42 @@
     position: absolute;
     right: 0;
 
-    -webkit-transition: 0.5s ease;
-    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
 
     padding: 0 0 20px 0;
 }
   
 .rightLinksContainer a:hover::after, .rightLinksContainer p:hover::after { 
     width: 100%; 
+}
+
+
+/* Hover content (appears below links) */
+.hoverContent {
+    width: 100%;
+
+    background: red;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin: 23px 0 0 0;
+
+    transform: scaleY(0.5);
+    transform-origin: 100% 50%;
+    transition: ease-in-out 0.5s;
+}
+
+.innerContent {
+    z-index: 5;
+
+    width: 100%;
+
+    background: rgba(0, 0, 0, 0.3);
+
+    position: absolute;
+    top: 0;
 }

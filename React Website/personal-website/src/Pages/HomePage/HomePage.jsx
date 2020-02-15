@@ -45,27 +45,26 @@ export default class HomePage extends React.Component {
         return (
             <React.Fragment>
                 <div className={styles.mainContentContainer}>
+                    <NavigationBar onPortfolioClick={this.scrollToMyWork} />
 
                     <div className={styles.headerContainer}>
-                        <NavigationBar onPortfolioClick={this.scrollToMyWork} />
-
                         <p className={styles.headerText}>Jake Short</p>
                         <p className={styles.headerSubText}>UI Designer & Programmer</p>
 
                         <div className={styles.linksRow}>
-                            <a href="https://github.com/Jake-Short" target="_blank" rel="noopener noreferrer">
+                            <a className={styles.iconWrapper} href="https://github.com/Jake-Short" target="_blank" rel="noopener noreferrer">
                                 <ion-icon name="logo-github"></ion-icon>
                             </a>
 
-                            <a href="https://instagram.com/JakeShort127" target="_blank" rel="noopener noreferrer">
+                            <a className={styles.iconWrapper} href="https://instagram.com/JakeShort127" target="_blank" rel="noopener noreferrer">
                                 <ion-icon name="logo-instagram"></ion-icon>
                             </a>
 
-                            <a href="https://twitter.com/JakeShort127" target="_blank" rel="noopener noreferrer">
+                            <a className={styles.iconWrapper} href="https://twitter.com/JakeShort127" target="_blank" rel="noopener noreferrer">
                                 <ion-icon name="logo-twitter"></ion-icon>
                             </a>
 
-                            <a href="https://dribbble.com/jakeshort" target="_blank" rel="noopener noreferrer">
+                            <a className={styles.iconWrapper} href="https://dribbble.com/jakeshort" target="_blank" rel="noopener noreferrer">
                                 <ion-icon name="logo-dribbble"></ion-icon>
                             </a>
                         </div>
