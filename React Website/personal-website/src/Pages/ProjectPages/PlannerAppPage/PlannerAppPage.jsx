@@ -18,7 +18,7 @@ export default class PlannerAppPage extends React.Component {
 
     componentWillMount() {
         let param = this.props.match.params.parameter;
-        if(param && param !== "") {
+        if(param === 'privacy') {
             this.setState({ param: param })
         }
     }

@@ -12,6 +12,7 @@ export default function App() {
 			<Switch>
 				<Route exact path="/" component={HomePage} />
 				<Route exact path="/plannerapp/:parameter" component={PlannerAppPage} />
+				<Route exact path="/plannerapp" component={PlannerAppPage} />
 			</Switch>
 		</Router>
     );
