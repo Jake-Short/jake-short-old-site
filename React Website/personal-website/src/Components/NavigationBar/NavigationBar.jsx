@@ -21,7 +21,7 @@ export default class NavigationBar extends React.Component {
                         <div className={styles.rightLinksContainer}>
                             <Link to="/" className={styles.linkText}>HOME</Link>
 
-                            <p className={styles.linkText} /**onMouseEnter={() => this.setState({ scaleY: 1 })} onMouseLeave={() =>  this.setState({ scaleY: 0 })}*/ onClick={this.props.onPortfolioClick}>PORTFOLIO</p>
+                            <p className={styles.linkText} onClick={this.props.onPortfolioClick}>PORTFOLIO</p>
                         </div>
                     </div>
 

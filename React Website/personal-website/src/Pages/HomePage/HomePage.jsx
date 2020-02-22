@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './HomePage.module.css';
 
 // Import components
@@ -162,15 +163,17 @@ export default class HomePage extends React.Component {
                                     <ScrollAnimation className={styles.myWorkTile} style={{ width: '20%' }} animateIn="fadeIn" animateOut="fadeOut" delay={250}>
                                         <img src={PlannerApp} className={styles.myWorkImage} alt="Planner application" />
 
-                                        <div className={styles.hoverContent}>
-                                            <p className={styles.hoverContentHeader}>Planner</p>
-                                            <p className={styles.hoverContentSubHeader}>iOS (coming soon)</p>
+                                        <Link to="/plannerapp" className={styles.hoverContentLink}>
+                                            <div className={styles.hoverContent}>
+                                                <p className={styles.hoverContentHeader}>Planner</p>
+                                                <p className={styles.hoverContentSubHeader}>iOS (coming soon)</p>
 
-                                            <div className={styles.hoverContentDivider}></div>
+                                                <div className={styles.hoverContentDivider}></div>
 
-                                            <p className={styles.hoverContentBody}>Mobile application developed using React Native. Features cloud syncing with Firebase, 
-                                            elegant and simple UI, and an easy to use experience.</p>
-                                        </div>
+                                                <p className={styles.hoverContentBody}>Mobile application developed using React Native. Features cloud syncing with Firebase, 
+                                                elegant and simple UI, and an easy to use experience.</p>
+                                            </div>
+                                        </Link>
                                     </ScrollAnimation>
 
                                     <ScrollAnimation className={styles.myWorkTile} style={{ width: '35%' }} animateIn="fadeIn" animateOut="fadeOut" delay={500}>
@@ -209,15 +212,18 @@ export default class HomePage extends React.Component {
                                     <ScrollAnimation className={styles.myWorkTile} style={{ width: '50%' }} animateIn="fadeIn" animateOut="fadeOut" delay={250}>
                                         <img src={PlannerApp} className={styles.myWorkImage} alt="Planner application" />
 
-                                        <div className={styles.hoverContent}>
-                                            <p className={styles.hoverContentHeader}>Planner</p>
-                                            <p className={styles.hoverContentSubHeader}>iOS (coming soon)</p>
 
-                                            <div className={styles.hoverContentDivider}></div>
+                                        <Link to="/plannerapp" className={styles.hoverContentLink}>
+                                            <div className={styles.hoverContent}>
+                                                <p className={styles.hoverContentHeader}>Planner</p>
+                                                <p className={styles.hoverContentSubHeader}>iOS (coming soon)</p>
 
-                                            <p className={styles.hoverContentBody}>Mobile application developed using React Native. Features cloud syncing with Firebase, 
-                                            elegant and simple UI, and an easy to use experience.</p>
-                                        </div>
+                                                <div className={styles.hoverContentDivider}></div>
+
+                                                <p className={styles.hoverContentBody}>Mobile application developed using React Native. Features cloud syncing with Firebase, 
+                                                elegant and simple UI, and an easy to use experience.</p>
+                                            </div>
+                                        </Link>
                                     </ScrollAnimation>
 
                                     <ScrollAnimation className={styles.myWorkTile} style={{ width: '50%' }} animateIn="fadeIn" animateOut="fadeOut" delay={250}>
