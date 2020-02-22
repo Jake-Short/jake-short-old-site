@@ -43,7 +43,7 @@ export default class PlannerAppPage extends React.Component {
 */}
                     </div>
 
-                    <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" animatePreScroll={false}>
+                    <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
                         <div className={styles.whatIsItContainer}>
                             <p className={styles.whatIsItHeader}>What Is It?</p>
 
@@ -54,7 +54,7 @@ export default class PlannerAppPage extends React.Component {
                         </div>
                     </ScrollAnimation>
 
-                    <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" animatePreScroll={false}>
+                    <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
                         <div className={styles.contactBox}>
                             <p className={styles.contactHeader}>Contact me for help at:</p>
 
