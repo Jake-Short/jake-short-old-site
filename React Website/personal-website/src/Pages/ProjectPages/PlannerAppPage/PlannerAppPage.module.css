@@ -215,3 +215,84 @@
         padding: 0;
     }
 }
+
+
+
+
+/* PRIVACY POLICY CONTENT */
+.privacyPolicyContainer {
+    width: 100%;
+
+    padding: 50px 0 0 10%;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.privacyPolicyRowContainer {
+    width: 70%;
+
+    margin: 30px 0;
+
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.privacyPolicySectionHeader {
+    font-size: 26px;
+    font-weight: 600;
+
+    margin: 0;
+
+    color: #ffffff;
+}
+
+.privacyPolicySectionSubHeader {
+    font-size: 16px;
+    font-weight: 500;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.privacyPolicyBody {
+    font-size: 16px;
+    font-weight: 500;
+
+    margin: 0;
+    padding: 12px 0 0 0;
+
+    color: rgba(255, 255, 255, 1);
+}
+
+
+
+
+.ol {
+    counter-reset: item;
+    
+    padding: 0;
+}
+.li {
+    display: block;
+
+    padding: 7px 0;
+}
+.li:before {
+    content: counters(item, ".") " ";
+    counter-increment: item;
+
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 600;
+}
+
+.liBold {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+
+    padding: 0 0 0 10px;
+}
