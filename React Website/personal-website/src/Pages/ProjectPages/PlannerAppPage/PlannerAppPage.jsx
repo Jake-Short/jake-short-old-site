@@ -34,13 +34,23 @@ export default class PlannerAppPage extends React.Component {
                         <p className={styles.headerText}>Tiny Planner</p>
                         <p className={styles.headerSubText}>iOS App</p>
 
-{/*
                         <div className={styles.linksRow}>
+                            {/**
                             <a className={styles.iconWrapper} href="https://github.com/Jake-Short" target="_blank" rel="noopener noreferrer">
                                 <img className={styles.appStoreBadge} style={{ height: '45px' }} src={AppStoreBadge}  alt="App store" />
                             </a>
+                            */}
+
+                            <a className={styles.iconWrapper} href="http://jakeshort.dev/files/presskit.zip" target="_blank" download rel="noopener noreferrer">
+                                <div className={styles.pressKitButton}>
+                                    <ion-icon name="download" className={styles.pressKitIcon}></ion-icon>
+
+                                    <p className={styles.pressKitText}>
+                                        Press Kit
+                                    </p>
+                                </div>
+                            </a>
                         </div>
-*/}
                     </div>
 
                     <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
