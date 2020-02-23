@@ -41,7 +41,7 @@ export default class PlannerAppPage extends React.Component {
                             </a>
                             */}
 
-                            <a className={styles.iconWrapper} href="http://jakeshort.dev/files/presskit.zip" target="_blank" download rel="noopener noreferrer">
+                            <a className={styles.iconWrapper} href="http://jakeshort.dev/files/PressKit.zip" download>
                                 <div className={styles.pressKitButton}>
                                     <ion-icon name="download" className={styles.pressKitIcon}></ion-icon>
 
