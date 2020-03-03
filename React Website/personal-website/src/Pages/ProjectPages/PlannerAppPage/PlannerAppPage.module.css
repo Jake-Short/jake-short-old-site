@@ -50,15 +50,11 @@
 }
 
 .linksRow ion-icon {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.7);
 
     font-size: 1.75em;
 
     transition: ease-in-out 0.12s;
-}
-
-.linksRow ion-icon:hover {
-    opacity: 0.8;
 }
 
 .pressKitButton {
