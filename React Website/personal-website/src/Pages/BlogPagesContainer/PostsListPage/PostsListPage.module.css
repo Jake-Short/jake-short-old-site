@@ -11,7 +11,7 @@
     width: 100%;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -27,7 +27,50 @@
     justify-content: center;
     align-items: center;
 
-    padding: 0 10%;
+    padding: 50px 10% 0 10%;
+
+    box-sizing: border-box;
+}
+
+
+/* Search Bar */
+.searchBar {
+    width: calc(90% - 40px);
+    max-width: 550px;
+    height: 75px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    padding: 0 20px;
+
+    border-radius: 5px;
+    border: solid 2px transparent;
+
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+
+    transition: ease-in-out 0.15s;
+}
+
+.searchBar:focus {
+    outline: none;
+
+    border: solid 2px rgba(255, 255, 255, 0.1);
+}
+
+.searchBar::placeholder {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.noResultsText {
+    font-size: 22px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+
+    text-align: center;
 }
 
 
@@ -50,14 +93,18 @@
     box-shadow: 0px 0px 15px 6px rgba(0, 0, 0, 0.1);
 
     transition: ease-in-out 0.15s;
-
-    margin: 25px;
 }
 
 .postCard:hover {
     transform: translateY(-4px);
 
     box-shadow: 0px 0px 15px 6px rgba(0, 0, 0, 0.2);
+}
+
+.postCardLink {
+    text-decoration: none;
+
+    margin: 25px;
 }
 
 .postCardThumbnail {
