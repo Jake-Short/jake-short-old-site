@@ -36,7 +36,7 @@ export default class PlannerAppPage extends React.Component {
 
                         <div className={styles.linksRow}>
                             {/**
-                            <a className={styles.iconWrapper} href="https://github.com/Jake-Short" target="_blank" rel="noopener noreferrer">
+                            <a className={styles.iconWrapper} href="https://apps.apple.com/us/app/tiny-planner/id1499275525" target="_blank" rel="noopener noreferrer">
                                 <img className={styles.appStoreBadge} style={{ height: '45px' }} src={AppStoreBadge}  alt="App store" />
                             </a>
                             */}
