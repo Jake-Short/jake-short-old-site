@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bbd1d1e75983f28a2d76882cd62d605c",
+    "revision": "efe61acafa40ec5b456bd70130384df2",
     "url": "/index.html"
   },
   {
-    "revision": "68fd135dd330fc980666",
-    "url": "/static/css/main.80ef9092.chunk.css"
+    "revision": "ec1fc4b32674ceeb5674",
+    "url": "/static/css/main.f4910896.chunk.css"
   },
   {
-    "revision": "1edc4af274300ad7c0dd",
-    "url": "/static/js/2.02aa2f6c.chunk.js"
+    "revision": "e0bda2ccf96bf81e0ca6",
+    "url": "/static/js/2.d0c50f7e.chunk.js"
   },
   {
     "revision": "6fd8af47425bf49410ef745affaa3265",
-    "url": "/static/js/2.02aa2f6c.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.d0c50f7e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "68fd135dd330fc980666",
-    "url": "/static/js/main.045593a0.chunk.js"
+    "revision": "ec1fc4b32674ceeb5674",
+    "url": "/static/js/main.d7a62084.chunk.js"
   },
   {
     "revision": "5db6dfe7a8e2b4135dd2",
@@ -34,5 +34,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "432f8b8884482b3fc8ca7f54d63f2602",
     "url": "/static/media/PlannerApp.432f8b88.png"
+  },
+  {
+    "revision": "2788feb340c92f042114f4ad0778f027",
+    "url": "/static/media/react-blog-no-backend.2788feb3.png"
   }
 ]);

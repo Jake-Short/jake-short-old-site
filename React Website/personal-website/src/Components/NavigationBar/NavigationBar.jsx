@@ -21,7 +21,7 @@ export default class NavigationBar extends React.Component {
                         <div className={styles.rightLinksContainer}>
                             <Link to="/" className={styles.linkText}>HOME</Link>
 
-                            <p className={styles.linkText} onClick={this.props.onPortfolioClick}>PORTFOLIO</p>
+                            <Link to="/blog" className={styles.linkText}>BLOG</Link>
                         </div>
                     </div>
 

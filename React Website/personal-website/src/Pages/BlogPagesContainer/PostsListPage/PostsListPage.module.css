@@ -1,0 +1,88 @@
+.mainContentContainer {
+    width: 100%;
+    height: 100%;
+
+    background: #2a2a2a;
+
+    padding: 0 0 120px 0;
+}
+
+.postCardsContainer {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding: 70px 0 0 0;
+}
+
+.postCardsContainerInner {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 10%;
+}
+
+
+/* Post Card */
+.postCard {
+    width: 380px;
+
+    border-radius: 5px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    cursor: pointer;
+
+    box-shadow: 0px 0px 15px 6px rgba(0, 0, 0, 0.1);
+
+    transition: ease-in-out 0.15s;
+
+    margin: 25px;
+}
+
+.postCard:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0px 0px 15px 6px rgba(0, 0, 0, 0.2);
+}
+
+.postCardThumbnail {
+    width: 350px;
+    height: 175px;
+
+    margin: 15px 0 0 0;
+}
+
+.postCardTitle {
+    font-size: 22px;
+    font-weight: 600;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    margin: 25px 0 0 0;
+    padding: 0 15px 0 15px;
+}
+
+.postCardDescription {
+    font-size: 18px;
+    font-weight: 600;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    margin: 20px 0 0 0;
+    padding: 0 15px 20px 15px;
+}
